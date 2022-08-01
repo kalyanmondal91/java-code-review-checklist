@@ -43,10 +43,18 @@ I consider the following points a MUST for any Java developer for when he/she is
     - Always override toString
     - Check if the code could be replaced by calling functions in other libraries/components
 - Best Practices
-    - OOP Principles are correctly used
+    - OOP Principles are correctly used 
+        - Abstraction
+        - Polymorphism
+        - Inheritance
+        - Encapsulation
     - Code to interfaces
     - The code follows the SOLID PRINCIPLES
-      - High Cohesion and Loose Coupling
+      - Single Responsibility Principle : A class should have one and only one responsibility. If class is performing more than one task, it leads to confusion.
+      - Open & Close Principle : The developers should focus more on extending the software entities rather than modifying them.
+      - Liskov Substitution Principle : It should be possible to substitute the derived class with base class.
+      - Interface Segregation Principle : It’s same as Single Responsibility Principle but applicable to interfaces. Each interface should be responsible for a specific task and should not have methods which he/she doesn’t need.
+      - Dependency Inversion Principle : Depend upon Abstractions- but not on concretions. This means that each module should be separated from other using an abstract layer which binds them together.
     - Design Patterns
         - Recommend a design pattern when you fill that a pattern could fit there
 - Exception Handling
@@ -117,6 +125,10 @@ I consider the following points a MUST for any Java developer for when he/she is
 - Ensure your code is not a candidate for race conditions and deadlocks
 
 ### Logging
+- Logging for different level should be configurable.
+- Log every transactions or the ones that require logging.
+- Use appropriate log level corresponding to messages. For Ex: ERROR for exception.
+- Always log execution time of method to check performance.
 
 ### Alerting
 
