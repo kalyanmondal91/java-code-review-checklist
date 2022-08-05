@@ -11,19 +11,18 @@ I consider the following points a MUST for any Java developer for when he/she is
     - The new code must be covered by unit tests
     - Any refactoring must be covered by unit tests
     - At least 80% coverage for the code changes
-    - [EMP] Unit tests should be compliant to the standards posted here
+    - Unit tests should be compliant to the standards.
 - Clean Code
+    - README file
+    - GitIgnore file
     - Naming Conventions (classes, constants, variables, methods (void vs return), etc)
-        - Ensure variable, method, and class names convey the subject
-        - Use all lower cases for package names and use reversed Internet domain naming conventions
-        - Class names should start with Capitals
-        - Variable and method names should use CamelCase
     - No hard-coded variables
     - Make sure it handles constants efficiently
+    - Proper comment in code whenever required
     - Check for proper clean Up
         - Remove Console print statements
         - Remove Unnecessary comments
-        - Use @deprecated on method/variable names that aren’t meant for future use
+        - Use @deprecated on method/variable names that are not meant for future use
     - Handle strings appropriately (use StringBuilder or StringBuffer)
     - Optimize to use switch-case over multiple If-Else statements
     - Make sure variables don’t cause memory leaks
@@ -31,11 +30,12 @@ I consider the following points a MUST for any Java developer for when he/she is
     - Replace imperative code with lambdas and streams
     - No spelling mistakes
     - The code does what it says it does
-    - The code is easy to read (**Readability**)
+    - The code is easy to read (**Readability**) && (**Understandability**)
     - Avoid duplicate code
     - Override hashCode when overriding equals
     - Reuse of existing code
     - Optimize Imports
+    - Code dynamic
     - Use equals over ==
     - Avoid finalizers
     - Use enums instead of int constants
@@ -58,12 +58,14 @@ I consider the following points a MUST for any Java developer for when he/she is
     - Design Patterns
         - Recommend a design pattern when you fill that a pattern could fit there
 - Exception Handling
-    - Beware of the NullPointerException
-    - Ensure that each exception is raised and handled correctly
-    - Ensure that you have a well-defined exception hierarchy
-    - Split the exceptions in two types: technical and business
-
+    
 ### Branching Strategy
+- Two Branch - master / develop
+- Any feature branch uses develop branch and can be merged
+- Fork a release branch off the develop branch where no further feature can be merged
+- Once release branch is tested it can merged to master and develop branch
+- Similarly hotfix branch can be created from master and can be merged to develop and master
+
 
 ### Application Structure
 - Ensure that your changes are correctly written on layers and it respects the Spring Boo App Structure
@@ -150,13 +152,21 @@ Ensure that the code is clean as much as possible.
 Recommend a design pattern where is the case
 
 ### Naming Conventions
+- Ensure variable, method, and class names convey the subject
+- Use all lower cases for package names and use reversed Internet domain naming conventions
+- Class names should start with Capitals
+- Variable and method names should use CamelCase
 #### App Structure
 Check that the changes are correctly written on layers and it respects the Spring Boot App Structure
 Do not mix up a Rest Service with a Web App
 #### Model
 Understand the meaning of usage of each model and try to find where is the most appropriate to be placed
 ### Exception Handling
-Ensure that each exception is raised and handled correctly TODO - Link to be provided
+Ensure that each exception is raised and handled correctly
+- Beware of the NullPointerException
+- Ensure that each exception is raised and handled correctly
+- Ensure that you have a well-defined exception hierarchy
+- Split the exceptions in two types: technical and business
 ### Unit Testing
 Coverage of minimum 80%
 Ensure that all corner cases are covered and it follows the unit testing standards 
